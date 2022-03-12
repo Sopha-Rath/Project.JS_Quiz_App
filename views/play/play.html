@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script defer src="play.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="../../index.html"><img src="../../img/logo.png" /></a>
+        <h2>Quiz App</h2>
+      </ul>
+      <ul>
+        <li><a href="../edit/edit.html">Edit quiz</a></li>
+        <li class="active"><a href="play.html">Play quiz</a></li>
+      </ul>
+    </nav>
+
+
+    <div id="play-view">
+      <div id="start">Start Quiz!</div>
+
+      <div id="quiz" style="display: none">
+        <div id="question">MY QUESTION</div>
+  
+        <div id="choices">
+          <button id="A" onclick="checkAnswer('A')">MY CHOICE A</button>
+          <button id="B" onclick="checkAnswer('B')">MY CHOICE B</button>
+          <button id="C" onclick="checkAnswer('C')">MY CHOICE C</button>
+          <button id="D" onclick="checkAnswer('D')">MY CHOICE D</button>
+        </div>
+        <progress id="progress_bar" value="20" max="100"></progress>
+      </div>
+
+      <div id="score" style="display: none">
+          <img id="score_img">
+          <p  id="score_p"></p>
+      </div>
+    </div>
+  </body>
+</html>

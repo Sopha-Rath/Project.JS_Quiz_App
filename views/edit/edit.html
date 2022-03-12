@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script defer src="edit.js"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <a href="../../index.html"><img src="../../img/logo.png" /></a>
+        <h2>Quiz App</h2>
+      </ul>
+      <ul>
+        <li class="active"><a href="edit.html">Edit quiz</a></li>
+        <li><a href="../play/play.html">Play quiz</a></li>
+      </ul>
+    </nav>
+
+    <div id="questions-dialog" style="display: none">
+      <dialog open>
+        <header>Create new question</header>
+
+        <section>
+          <label>Title</label>
+          <input id="title" type="text" placeholder="Question title" />
+
+          <label>Answers</label>
+          <div class="card-body">
+            <input type="radio" name="radio_answer" class="radio_answer" value="A">
+            <input id="choiceA" type="text" placeholder=" Answer A" />
+          </div>
+        
+            
+          <div class="card-body">
+            <input type="radio" name="radio_answer" class="radio_answer" value="B">
+            <input id="choiceB" type="text" placeholder=" Answer B" />
+          </div>
+          
+
+          <div class="card-body">
+            <input type="radio" name="radio_answer" class="radio_answer" value="C">
+            <input id="choiceC" type="text" placeholder=" Answer C" />
+          </div>
+          
+          <div class="card-body">
+            <input type="radio" name="radio_answer" class="radio_answer" value="D">
+            <input id="choiceD" type="text" placeholder=" Answer D" />
+          </div>
+        </section>
+
+        </section>
+
+        <menu>
+          <button onclick="onCancel()">Cancel</button>
+          <button id="createEditButton" onclick="onCreate()">Create</button>
+        </menu>
+      </dialog>
+    </div>
+
+    <div id="questions-view">
+      <button onclick="onAddQuestion()">Add question</button>
+
+      <div id="questions-container"></div>
+    </div>
+  </body>
+</html>
